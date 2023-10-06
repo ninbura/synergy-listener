@@ -29,7 +29,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 
 - the path to `current-computer.txt` is found at the top of the `synergy-listener.ps1` file as a parameter
 - as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
-- if file is not updating you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
+- if `current-computer.txt` is not updating you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
 ### 6. configure external functionality
 
