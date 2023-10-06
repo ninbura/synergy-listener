@@ -2,7 +2,9 @@
 
 ### 1. install the latest powershell
 
-- winget install microsoft.powershell
+- ```powershell
+  winget install microsoft.powershell
+  ```
 
 ### 2. clone this repository into `c:/repos`
 
