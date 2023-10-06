@@ -15,7 +15,7 @@ winget install git.git
 ```
 
 ### 2. clone the synergy-listener repository into `c:/repos`
-run the folling command in powershell
+run the folling commands in powershell
 ```powershell
 new-item -path /repos
 cd /repos
