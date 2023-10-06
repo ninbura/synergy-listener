@@ -2,6 +2,8 @@
 
 ### 1. install the latest powershell
 
+run the following command in powershell or command prompt
+
 ```powershell
 winget install microsoft.powershell
 ```
