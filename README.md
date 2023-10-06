@@ -47,7 +47,7 @@ note that it may take some time for the script to start if you have a lot of sta
 ### 7. configure external applications/processes to read `current-computer.txt` per your needs
 
 # removal
-run the following command in the latest version of powershell to remove the task if desired. **this will stop `current-computer.txt` from updating**.
+run the following command in powershell, note that **this will stop `current-computer.txt` from updating**.
 ```powershell
 Unregister-ScheduledTask -TaskName "synergy-listener" -Confirm:$false
 ```
