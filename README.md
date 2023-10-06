@@ -8,7 +8,7 @@
 
 ### 2. clone this repository into `c:/repos`
 
-- if you'd rather clone to a different location make sure to change the path to reflect the correct location below.
+- if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below.
 
 ### 3. run the following command in the latest powershell
 
