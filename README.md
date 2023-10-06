@@ -1,3 +1,7 @@
+# summary
+**currently this project is only suitable when the host machine is a windows machine.** synergy-listener listens for changes in synergy 3's host's log file, parses the tail-end, and writes what computer is currently being controlled to a `txt` file. you can then hook into this `txt` file via other applications/processes to react based on which computer is currently being controlled. for example, the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) plugin for [obs](https://obsproject.com/) can switch scenes based on the contents of a text file, or the coordinates of your mouse (and more). I combine this with the obs [ndi plugin](https://github.com/obs-ndi/obs-ndi) to send a feed from each PC in my setup to my capture pc; from there I can switch to whatever scene represents whichever display, or whatever section of a display I'm currently controlling with synergy across multiple computers. see the below for video displaying this in action.
+https://github.com/ninbura/synergy-listener/assets/58058942/9d144a76-44fe-4c0a-aec6-6a9c96fb408b
+
 # setup task
 
 ### 1. install the latest powershell
@@ -34,9 +38,7 @@ note that it may take some time for the script to start if you have a lot of sta
 - as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
 - if `current-computer.txt` is not updating it's likely that you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
-### 7. configure external functionality
-
-I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) & [ndi](https://github.com/obs-ndi/obs-ndi) plugins to display content relative to my mouse coordinates accross all PCs in my setup.
+### 7. configure external applications/processes to read `current-computer.txt` per your needs
 
 # remove task
 
