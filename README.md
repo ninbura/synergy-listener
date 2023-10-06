@@ -33,7 +33,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 
 ### 6. configure external functionality
 
-Each computer in my setup uses [ndi](https://ndi.video/tools/) to pass display capture to an aggregated capture pc. I then use a combination of OBS & Advanced Scene switcher with the [ndi plugin](https://github.com/obs-ndi/obs-ndi) to display content relative to where my mouse is on any given PC.
+I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) (reads `current-computer.txt`) & [ndi](https://github.com/obs-ndi/obs-ndi) plugins to display content relative to my mouse coordinates accross all PCs in my setup.
 
 # remove task
 
