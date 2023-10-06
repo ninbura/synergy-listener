@@ -4,7 +4,8 @@
 
 - winget install microsoft.powershell
 
-### 2. clone this repository into c:/repos
+### 2. clone this repository into `c:/repos`
+- if you'd rather clone to a different location make sure to change the path to reflect the correct location below.
 
 ### 3. run the following command in the latest powershell
 
