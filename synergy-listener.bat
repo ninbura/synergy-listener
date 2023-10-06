@@ -1,1 +1,0 @@
-pwsh c:/repos/synergy-listener/synergy-listener.ps1
