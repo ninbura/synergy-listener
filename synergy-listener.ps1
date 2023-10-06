@@ -39,6 +39,14 @@ function checkIfComputerHasChanged($currentComputer){
   return $currentComputer -ne $previousComputer
 }
 
+function updateTxtIfComputerHasChanged($currentComputer){
+  if(checkIfComputerHasChanged $currentComputer){
+    if(test-path $outputFilePath) {
+      Out-File -FilePath "$outputFilePath\current-computer.txt" -InputObject $currentComputer 
+    }
+  }
+}
+
 function parseSynergyLog(){
   $endOfSynergyLog = getEndOfSynergyLog
 
@@ -48,13 +56,11 @@ function parseSynergyLog(){
     if($line -match "switch from") {
       $currentComputer = extractComputerNameFromLogLine $line
 
-      if(checkIfComputerHasChanged $currentComputer){
-        Out-File -FilePath "$outputFilePath\current-computer.txt" -InputObject $currentComputer 
-      }
+      updateTxtIfComputerHasChanged $currentComputer
       
       break
     }
-  }
+  } 
 }
 
 function listenForSynergyLogChanges(){
