@@ -20,6 +20,6 @@
 
 run the following command in the latest version of powershell
 
-```powershell
-Unregister-ScheduledTask -TaskName synergy-listener -Confirm:$false
-```
+- ```powershell
+  Unregister-ScheduledTask -TaskName synergy-listener -Confirm:$false
+  ```
