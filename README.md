@@ -21,7 +21,7 @@ new-item -path /repos
 cd /repos
 git clone https://github.com/ninbura/synergy-listener
 ```
-if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below
+if you'd rather clone to a different location, make sure to change the path in the `Register-ScheduledTask` command below
 
 ### 3. change parameters in `synergy-listener.ps1`
 - aformention parameters, `$logPath` & `$outputFilePath`, can be found at the top of `synergy-listener.ps1`.
