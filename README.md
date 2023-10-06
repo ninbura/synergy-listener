@@ -5,7 +5,7 @@ synergy-listener listens for changes in the synergy 3 host's log file, parses th
 
 https://github.com/ninbura/synergy-listener/assets/58058942/a8c67747-cbfe-47ef-9c16-118d0a731814
 
-# setup instructions
+# setup
 
 ### 1. install the latest powershell & git
 run the following commands in powershell
@@ -46,7 +46,7 @@ note that it may take some time for the script to start if you have a lot of sta
 
 ### 7. configure external applications/processes to read `current-computer.txt` per your needs
 
-# unregistering task & removal
+# removal
 run the following command in the latest version of powershell to remove the task if desired. **this will stop `current-computer.txt` from updating**.
 ```powershell
 Unregister-ScheduledTask -TaskName "synergy-listener" -Confirm:$false
