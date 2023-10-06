@@ -33,7 +33,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 
 ### 6. configure external functionality
 
-I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) (reads `current-computer.txt`) & [ndi](https://github.com/obs-ndi/obs-ndi) plugins to display content relative to my mouse coordinates accross all PCs in my setup.
+I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) & [ndi](https://github.com/obs-ndi/obs-ndi) plugins to display content relative to my mouse coordinates accross all PCs in my setup.
 
 # remove task
 
