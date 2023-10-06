@@ -7,28 +7,25 @@ https://github.com/ninbura/synergy-listener/assets/58058942/a8c67747-cbfe-47ef-9
 
 # setup instructions
 
-### 1. install the latest powershell
-run the following command in powershell
+### 1. install the latest powershell & git
+run the following commands in powershell
 ```powershell
 winget install microsoft.powershell
-```
-
-### 2. install git
-run the following command in powershell
-```powershell
 winget install git.git
 ```
 
-### 3. clone the synergy-listener repository into `c:/repos`
+### 2. clone the synergy-listener repository into `c:/repos`
 run the folling command in powershell
 ```powershell
+new-item -path /repos
+cd /repos
 git clone https:github.com/ninbura/synergy-listener
 ```
 if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below
 
-### 4. change parameters in `synergy-listener.ps1`
-
-- as can be seen in the default state of `synergy-listener.ps1` I'm using network locations
+### 3. change parameters in `synergy-listener.ps1`
+- aformention parameters, `$logPath` & `$outputFilePath`, can be found at the top of `synergy-listener.ps1`.
+- as can be seen in the default state, I'm using network locations
 - simply change the path parameters to reflect
   1.  the location of the synergy log you're trying to read (host's log)
   2.  the location you'd like to output the `current-computer.txt` file to
@@ -43,19 +40,15 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 note that it may take some time for the script to start if you have a lot of startup processes on your computer, at most it should take a couple minutes.
 
 ### 6. verify that `current-computer.txt` is updating
-
 - the path to `current-computer.txt` is found at the top of the `synergy-listener.ps1` file as a parameter
 - as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
 - if `current-computer.txt` is not updating it's likely that you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
 ### 7. configure external applications/processes to read `current-computer.txt` per your needs
 
-# removal
-
+# unregistering task & removal
 run the following command in the latest version of powershell to remove the task if desired. **this will stop `current-computer.txt` from updating**.
-
 ```powershell
 Unregister-ScheduledTask -TaskName "synergy-listener" -Confirm:$false
 ```
-
-delete remaining files if desired.
+delete repository files if desired.
