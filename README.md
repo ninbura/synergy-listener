@@ -1,6 +1,4 @@
-# synergy-listener
-
-## setup task
+# setup task
 
 ### 1. install the latest powershell
 
@@ -16,7 +14,7 @@
   Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskTrigger -AtLogon) -Action (New-ScheduledTaskAction -Execute "pwsh" -Argument "-WindowStyle Hidden -Command `"& c:/repos/synergy-listener/synergy-listener.ps1`"") -RunLevel Highest -Force;
   ```
 
-## remove task
+# remove task
 
 ```powershell
 Unregister-ScheduledTask -TaskName synergy-listener -Confirm:$false
