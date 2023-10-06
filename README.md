@@ -25,7 +25,7 @@ if you'd rather clone to a different location, make sure to change the path in t
 
 ### 3. change parameters in `synergy-listener.ps1`
 - aformention parameters, `$logPath` & `$outputFilePath`, can be found at the top of `synergy-listener.ps1`.
-- as can be seen in the default state, I'm using network locations
+- as can be seen in the default state, I'm using network locations.
 - simply change the path parameters to reflect
   1.  the location of the synergy log you're trying to read (host's log)
   2.  the location you'd like to output the `current-computer.txt` file to
