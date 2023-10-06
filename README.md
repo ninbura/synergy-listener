@@ -39,7 +39,7 @@ I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://
 
 # remove task
 
-run the following command in the latest version of powershell
+run the following command in the latest version of powershell to remove the task if desired. **this will stop `current-computer.txt` from updating**.
 
 ```powershell
 Unregister-ScheduledTask -TaskName synergy-listener -Confirm:$false
