@@ -19,7 +19,7 @@ run the folling commands in powershell
 ```powershell
 new-item -path /repos
 cd /repos
-git clone https:github.com/ninbura/synergy-listener
+git clone https://github.com/ninbura/synergy-listener
 ```
 if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below
 
