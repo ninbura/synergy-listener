@@ -8,7 +8,7 @@ winget install microsoft.powershell
 
 ### 2. clone this repository into `c:/repos`
 
-if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below.
+if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below
 
 ### 3. change parameters in `synergy-listener.ps1`
 
@@ -24,6 +24,12 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 ```
 
 ### 5. restart your computer
+
+### 6. verify that `current-computer.txt` is updating
+
+- the path to `current-computer.txt` is found at the top of the `synergy-listener.ps1` file as a parameter
+- as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
+- if file is not updating you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
 ### 6. configure external functionality
 
