@@ -33,7 +33,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 - as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
 - if `current-computer.txt` is not updating it's likely that you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
-### 6. configure external functionality
+### 7. configure external functionality
 
 I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://github.com/WarmUpTill/SceneSwitcher) & [ndi](https://github.com/obs-ndi/obs-ndi) plugins to display content relative to my mouse coordinates accross all PCs in my setup.
 
