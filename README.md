@@ -26,6 +26,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 ```
 
 ### 5. restart your computer
+note that it may take some time for the script to start if you have a lot of startup processes on your computer, at most it should take a couple minutes.
 
 ### 6. verify that `current-computer.txt` is updating
 
