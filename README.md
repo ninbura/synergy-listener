@@ -8,26 +8,33 @@ https://github.com/ninbura/synergy-listener/assets/58058942/a8c67747-cbfe-47ef-9
 # setup instructions
 
 ### 1. install the latest powershell
-
-run the following command in powershell or command prompt
-
+run the following command in powershell
 ```powershell
 winget install microsoft.powershell
 ```
 
-### 2. clone this repository into `c:/repos`
+### 2. install git
+run the following command in powershell
+```powershell
+winget install git.git
+```
 
+### 3. clone the synergy-listener repository into `c:/repos`
+run the folling command in powershell
+```powershell
+git clone https:github.com/ninbura/synergy-listener
+```
 if you'd rather clone to a different location make sure to change the path in the `Register-ScheduledTask` command below
 
-### 3. change parameters in `synergy-listener.ps1`
+### 4. change parameters in `synergy-listener.ps1`
 
 - as can be seen in the default state of `synergy-listener.ps1` I'm using network locations
 - simply change the path parameters to reflect
   1.  the location of the synergy log you're trying to read (host's log)
   2.  the location you'd like to output the `current-computer.txt` file to
 
-### 4. run the following command in the latest version of powershell
-
+### 4. register a scheduled task that starts `synergy-listener.ps1` at logon
+run the following command in powershell
 ```powershell
 Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskTrigger -AtLogon) -Action (New-ScheduledTaskAction -Execute "pwsh" -Argument "-WindowStyle Hidden -Command `"& c:/repos/synergy-listener/synergy-listener.ps1`"") -RunLevel Highest -Force;
 ```
