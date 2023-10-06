@@ -31,7 +31,7 @@ Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskT
 
 - the path to `current-computer.txt` is found at the top of the `synergy-listener.ps1` file as a parameter
 - as you switch PCs with synergy this file should update to reflect the name of the PC currently being controlled
-- if `current-computer.txt` is not updating you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
+- if `current-computer.txt` is not updating it's likely that you poorly configured `synergy-listener.ps1` or the `Reigster-ScheudledTask` command
 
 ### 6. configure external functionality
 
@@ -42,5 +42,5 @@ I use [obs](https://obsproject.com/) with the [advanced scene switcher](https://
 run the following command in the latest version of powershell to remove the task if desired. **this will stop `current-computer.txt` from updating**.
 
 ```powershell
-Unregister-ScheduledTask -TaskName synergy-listener -Confirm:$false
+Unregister-ScheduledTask -TaskName "synergy-listener" -Confirm:$false
 ```
