@@ -14,9 +14,8 @@ if you'd rather clone to a different location make sure to change the path in th
 
 - as can be seen in the default state of `synergy-listener.ps1` I'm using network locations
 - simply change the paths to reflect
-
-1.  the location of the synergy log you're trying to read (hosts log)
-2.  the location you'd like to output the `current-computer.txt` file to
+  1.  the location of the synergy log you're trying to read (host's log)
+  2.  the location you'd like to output the `current-computer.txt` file to
 
 ### 4. run the following command in the latest version of powershell
 
