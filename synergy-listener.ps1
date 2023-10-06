@@ -1,5 +1,5 @@
 param(
-  [string]$logPath = "\\192.168.2.3\a-sexy-desktop\ProgramData\Synergy\logs\synergy.log",
+  [string]$logPath = "\\192.168.2.3\a-sexy-desktop\ProgramData\Synergy\logs\synergy.log", # host's log path
   [string]$outputFilePath = "\\192.168.3.4\a-sexy-capturer\Users\$env:username\Documents"
 )
 
