@@ -23,7 +23,9 @@ if you'd rather clone to a different location make sure to change the path in th
 Register-ScheduledTask -TaskName "synergy-listener" -Trigger (New-ScheduledTaskTrigger -AtLogon) -Action (New-ScheduledTaskAction -Execute "pwsh" -Argument "-WindowStyle Hidden -Command `"& c:/repos/synergy-listener/synergy-listener.ps1`"") -RunLevel Highest -Force;
 ```
 
-### 5. configure external functionality
+### 5. restart your computer
+
+### 6. configure external functionality
 
 Each computer in my setup uses [ndi](https://ndi.video/tools/) to pass display capture to an aggregated capture pc. I then use a combination of OBS & Advanced Scene switcher with the [ndi plugin](https://github.com/obs-ndi/obs-ndi) to display content relative to where my mouse is on any given PC.
 
