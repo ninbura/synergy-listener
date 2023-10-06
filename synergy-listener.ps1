@@ -1,6 +1,6 @@
 param(
   [string]$logPath = "\\192.168.2.3\a-sexy-desktop\ProgramData\Synergy\logs\synergy.log",
-  [string]$outputFilePath = "\\192.168.2.4\a-sexy-capturer\Users\gabri\Documents"
+  [string]$outputFilePath = "\\192.168.3.4\a-sexy-capturer\Users\gabri\Documents"
 )
 
 function checkIfLogHasUpdated(){
