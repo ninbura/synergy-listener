@@ -15,7 +15,7 @@ function checkIfLogHasUpdated(){
 
 function getEndOfSynergyLog(){
   if(test-path $logPath){
-    $endOfSynergyLog = Get-Content $logPath | Select-Object -Last 5
+    $endOfSynergyLog = Get-Content -path $logPath -tail 5
 
     [array]::Reverse($endOfSynergyLog)
   }
