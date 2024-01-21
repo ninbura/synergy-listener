@@ -46,7 +46,7 @@ note that it may take some time for the script to start if you have a lot of sta
 
 ### 7. configure external applications/processes to read `current-computer.txt` per your needs
 
-# restarting task
+# restarting the scheduled task
 run the following commands in powershell
 ```powershell
 stop-scheduledtask -taskname "synergy-listener"
