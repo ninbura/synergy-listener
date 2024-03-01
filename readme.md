@@ -34,7 +34,7 @@ git clone https://github.com/ninbura/synergy-listener
     ```
 
 ### 4. install synergy-listener
-Simply run `~install.bat` at the root of the repository **as administrator**. After this, the proccess should automatically startup with your computer.
+Simply run `~install.bat` at the root of the repository **as administrator**. After this, the proccess should automatically startup with your computer. From now on, when you switch computers with Synergy, the `current-computer.txt` file should contain the computer currently being controlled by Synergy. `current-computer.txt` should be located within your specified `OutputFileDirectory`.
 
 # log information
 If you're running into issues, or it seems like synergy-listener isn't running; check the `synergry-listener.log` file in root where you cloned the repo.
