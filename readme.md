@@ -8,15 +8,14 @@ https://github.com/ninbura/synergy-listener/assets/58058942/a8c67747-cbfe-47ef-9
 # Setup
 
 ### 1. Install the Latest PowerShell & Git
-Run the following commands in powershell.
+Run the following command in powershell.
 ```powershell
-winget install microsoft.powershell
-winget install git.git
+winget install Microsoft.PowerShell Git.Git
 ```
 
-### 2. Clone the synergy-listener Repository in the Directory You Desire
-Run the folling commands in powershell.
-```powershell
+### 2. Clone the synergy-listener Repository
+Run the following command in PowerShell in the directory you desire (ie `cd ~/Documents`).
+```PowerShell
 git clone https://github.com/ninbura/synergy-listener
 ```
 
