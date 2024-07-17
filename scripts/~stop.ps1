@@ -10,15 +10,8 @@ function Main() {
   Write-Host "Stopping Synergy Listener..."
 
   Stop-ScheduledTask -TaskName "synergy-listener"
-
+  
   Get-Process | Where-Object { $_.Path -like "*synergy-listener.ps1" } | Stop-Process -Force
-
-  Write-Host "Synergy Listener stopped."
-  Write-Host "Starting Synergy Listener..."
-
-  Start-ScheduledTask -TaskName "synergy-listener"
-
-  Write-Host "Synergy Listener started."
 
   Quit
 }

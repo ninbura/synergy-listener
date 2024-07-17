@@ -21,4 +21,3 @@ echo.
 pwsh -noprofile -executionpolicy bypass -file "%scriptPath%"
 
 exit
-

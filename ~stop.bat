@@ -13,7 +13,7 @@ if %errorLevel% == 0 (
     exit
 )
 
-set scriptPath=%~dp0scripts\~uninstall.ps1
+set scriptPath=%~dp0scripts\~stop.ps1
 
 echo script path = %scriptPath%
 echo.

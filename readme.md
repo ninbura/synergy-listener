@@ -7,38 +7,40 @@ https://github.com/ninbura/synergy-listener/assets/58058942/a8c67747-cbfe-47ef-9
 
 # setup
 
-### 1. install the latest powershell & git
-run the following commands in powershell
+### 1. Install the Latest PowerShell & Git
+Run the following commands in powershell.
 ```powershell
 winget install microsoft.powershell
 winget install git.git
 ```
 
-### 2. clone the synergy-listener repository in the directory you desire
-run the folling commands in powershell
+### 2. Clone the synergy-listener Repository in the Directory You Desire
+Run the folling commands in powershell.
 ```powershell
 git clone https://github.com/ninbura/synergy-listener
 ```
 
-### 3. create and modify `config.json`
-- create `config.json` in the root of the repository you just cloned
+### 3. Create and Modify `config.json`
+- Create `config.json` in the root of the repository you just cloned.
   - ```PowerShell
     New-Item -Type File -Name config.json
     ```
-- provide the `SynergryLogPath` & `OutputFileDirectory` within said configuraiton
+- Provide the `SynergryLogPath`, `OutputFileDirectory`, & `RetryOnFailure` within said configuraiton.
   - ```json
     {
       "SynergyLogPath": "C:/ProgramData/Synergy/logs/synergy.log",
-      "OutputFileDirectory": "//192.168.2.4/a-sexy-capturer/Users/gabri/Documents"
+      "OutputFileDirectory": "//192.168.2.4/a-sexy-capturer/Users/gabri/Documents",
+      "RetryOnFailure": true
     }
     ```
+- The `RetryOnFailure` option will make synergy-listener attempt to relocate the relevant files/paths set in the configuration if it can't find them. Useful if you're using network locations.
 
-### 4. install synergy-listener
+### 4. Install synergy-listener
 Simply run `~install.bat` at the root of the repository **as administrator**. After this, the proccess should automatically startup with your computer. From now on, when you switch computers with Synergy, the `current-computer.txt` file should contain the computer currently being controlled by Synergy. `current-computer.txt` should be located within your specified `OutputFileDirectory`.
 
-# log information
+# Log Information
 If you're running into issues, or it seems like synergy-listener isn't running; check the `synergry-listener.log` file in root where you cloned the repo.
 
-# restarting & uninstalling synergy-listener
-- run `~restart.bat` to restart the task if it's not working
-- Run `~uninstall.bat` to uninstall to remove the task, feel free to delete the repository after this.
+# Stopping, Restarting, & Uninstalling synergy-listener
+- run `~restart.bat` as administrator to restart the task if it's not working
+- Run `~uninstall.bat` as administrator to uninstall to remove the task, feel free to delete the repository after this.
