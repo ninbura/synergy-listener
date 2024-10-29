@@ -28,7 +28,7 @@ git clone https://github.com/ninbura/synergy-listener
   - ```json
     {
       "SynergyLogPath": "C:/ProgramData/Synergy/logs/synergy.log",
-      "OutputFileDirectory": "//192.168.2.4/a-sexy-capturer/Users/gabri/Documents",
+      "OutputFileDirectory": "//192.168.1.4/a-sexy-capturer/Users/gabri/Documents",
       "RetryOnFailure": true
     }
     ```
