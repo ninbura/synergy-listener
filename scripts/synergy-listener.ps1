@@ -119,7 +119,7 @@ function GetCurrentComputerNameFromSynergyLog($Config)
 {
   $synergyLogPath = $Config.SynergyLogPath
 
-  try { $endOfSynergyLog = Get-Content -Path $synergyLogPath -Tail 5 -ErrorAction Stop }
+  try { $endOfSynergyLog = Get-Content -Path $synergyLogPath -Tail 15 -ErrorAction Stop }
   catch
   {
     WriteToLog("Error reading synergy log file, revalidating configuration.")
